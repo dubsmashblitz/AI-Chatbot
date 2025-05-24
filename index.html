@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Text Checker Pro</title> <!-- Updated Title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1>Advanced Text Checker Pro</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="input-section">
+            <div class="input-controls">
+                <label for="language-select">Language (for Grammar/Spelling):</label>
+                <select id="language-select" name="language">
+                    <option value="en-US">English (US)</option>
+                    <option value="en-GB">English (GB)</option>
+                    <option value="de-DE">German (Germany)</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+
+            <label for="text-input">Enter your text below:</label>
+            <textarea id="text-input" rows="15" placeholder="Paste or type your text here..."></textarea>
+
+            <div class="button-group">
+                <button id="check-text-button" class="btn btn-primary">Check Grammar & Style</button>
+                <button id="check-plagiarism-button" class="btn btn-secondary">Check for Plagiarism</button>
+                <button id="check-ai-text-button" class="btn btn-accent">Check for AI Text</button>
+            </div>
+        </section>
+
+        <section id="results-area" class="results-section" aria-live="polite">
+            <h2>Results</h2>
+            <div id="results-content" class="result-box">
+                <!-- Grammar and spelling results -->
+            </div>
+            <div id="readability-results" class="result-box">
+                <!-- Readability and style results -->
+            </div>
+            <div id="plagiarism-results" class="result-box">
+                <!-- Plagiarism results -->
+            </div>
+            <div id="ai-text-results" class="result-box">
+                <!-- AI text detection results -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>&copy; 2024 Advanced Text Checker Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="readability.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

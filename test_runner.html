@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend Unit Test Runner</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        #test-results li { margin-bottom: 5px; }
+        .pass { color: green; }
+        .fail { color: red; font-weight: bold; }
+        .summary { margin-top: 20px; font-weight: bold; }
+        .log-area { 
+            margin-top:15px; padding:10px; border:1px solid #ccc; 
+            background-color:#f9f9f9; max-height: 300px; overflow-y: auto; 
+            font-family: monospace; font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontend Unit Test Results</h1>
+    <ul id="test-results"></ul>
+    <div id="test-summary" class="summary"></div>
+    <div class="log-area" id="test-log-area"><strong>Log:</strong><br></div>
+
+    <!-- Mock DOM elements that script.js interacts with -->
+    <select id="language-select">
+        <option value="en-US" selected>English (US)</option>
+    </select>
+    <textarea id="text-input"></textarea>
+    <button id="check-text-button">Check Grammar & Style</button>
+    <button id="check-plagiarism-button">Check for Plagiarism</button>
+    <button id="check-ai-text-button">Check for AI Text</button>
+
+    <div id="results-area">
+        <h2>Results (Mock)</h2>
+        <div id="results-content" class="result-box"></div>
+        <div id="readability-results" class="result-box"></div>
+        <div id="plagiarism-results" class="result-box"></div>
+        <div id="ai-text-results" class="result-box"></div>
+    </div>
+
+    <!-- Include libraries and scripts to be tested -->
+    <script src="readability.js"></script> 
+    <script src="script.js"></script> 
+    
+    <!-- Test script itself -->
+    <script src="test_script.js"></script>
+</body>
+</html>
