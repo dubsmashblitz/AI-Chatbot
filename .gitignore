@@ -1,0 +1,13 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtualenv
+venv/
+*.venv/
+
+# Ignore downloaded LanguageTool files
+languagetool_files/
+
+# Ignore log files
+*.log
